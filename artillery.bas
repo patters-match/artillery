@@ -12,7 +12,7 @@
 @trajectoriesloop:
         for t=0 to 30 step 0.5
 # player 1
-# restore COORDS sysvar, store off-screen and in-flight flags from previous loop
+# restore COORDS sysvars, store off-screen and in-flight flags from previous loop
             poke 23677,r: \
             poke 23678,s: \
             let p1=j: \
