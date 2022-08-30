@@ -14,4 +14,5 @@ And the different animations of the flags during the game and for the winner are
 This could have been a perfect example of use of computers in the 80s for studying at school.
 Very good work!
 
-_IvanBasic (BASIC coding supremo), worldofspectrum.org forum_
+_IvanBasic, worldofspectrum.org forum_
+_[(BASIC coding supremo)](https://spectrumcomputing.co.uk/list?label_id=16585)_
