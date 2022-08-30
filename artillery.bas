@@ -1,3 +1,6 @@
+# Artillery: Projectile motion simulation for ZX Spectrum 
+# https://patters.itch.io/artillery
+#
         goto @variablessetup
 
         rem Artillery, based on the 1987 Macintosh game by Kirk Crawford
