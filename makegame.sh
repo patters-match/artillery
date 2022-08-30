@@ -6,6 +6,8 @@
 # pass the code base filename (without extension) the second parameter ($file_base_name)
 # pass the code working folder name as the third parameter ($file_path)
 
+# uses zmakebas from https://github.com/ohnosec/zmakebas
+
 file=$1
 file_base_name=$2
 file_path=$3
