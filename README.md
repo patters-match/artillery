@@ -7,4 +7,4 @@ https://patters.itch.io/artillery
 
 A BASIC demake of Artillery for Macintosh by Kirk Crawford
 
-[![Macintosh Artillery](images/artillery.png "Macintosh Artillery")](https://kirkanddonna.com/kirk/artillery)
+[![Macintosh Artillery](images/artillery_mac.png "Macintosh Artillery")](https://kirkanddonna.com/kirk/artillery)
