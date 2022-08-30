@@ -521,11 +521,12 @@
         rem user defined graphics
         rem 
 @udg:
-        restore 2610
+        restore @udgdata
         for x=0 to 71: \
             read y: \
             poke usr "a"+x,y: \
         next x
+@udgdata:
         data 1,1,1,1,1,1,1,1,153,153,255,96,40,37,34,34,153,153,255,38,132,68,164,164,34,34,35,32,44,38,32,32,164,36,236,28,20,4,100,4,128,128,128,128,128,128,128,128,0,16,40,16,0,0,0,0,0,0,16,32,126,32,16,0,0,0,8,4,126,4,8,0
 
         rem 
@@ -566,7 +567,7 @@
         let gd=0: \
         let cs=0
         dim c$(12): \
-        restore 2700: \
+        restore @arrowsprite: \
         for n=1 to 12: \
             read a: \
             let c$(n)=chr$ a: \
@@ -581,12 +582,14 @@
         dim b$(42): rem castle sprites
         dim g$(46): \
         dim h$(46): rem hit castle sprites
+@arrowsprite:
         data 22,0,0,21,1,19,8,17,8,16,3,94: rem top arrow
+@castlesprite:
         data 22,17,0,17,8,19,8,16,7,144,22,17,1,16,1,130: rem castle flag
         data 22,18,0,19,1,16,0,145,19,0,16,1,146: rem castle top
         data 22,19,0,19,1,16,0,147,19,0,16,1,148: rem castle base
         data 6,17,2,18,1,21,1,137,19,0,137: rem castle fire
-        restore 2710
+        restore @castlesprite
         for n=1 to 42: \
             read a: \
             let a$(n)=chr$ a: \
@@ -601,7 +604,8 @@
         dim c(22,2)
         rem time of day colour lookup table
         rem day,dusk,night,dawn - 1st row sky types, +10 for bright
-        restore 2850
+        restore @colourlut
+@colourlut:
         data 15,5,1,6
         data 2,2,0,2
         data 4,4,0,4
