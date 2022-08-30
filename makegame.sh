@@ -7,6 +7,7 @@
 # pass the code working folder name as the third parameter ($file_path)
 
 # uses zmakebas from https://github.com/ohnosec/zmakebas
+# and z88dk-appmake from https://github.com/z88dk/z88dk/releases
 
 file=$1
 file_base_name=$2
