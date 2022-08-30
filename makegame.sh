@@ -21,7 +21,7 @@ echo "~~~SCREEN~~~"
 z88dk-appmake +zx -b ${file_path}/cannon5.scr -o ${tmp}/screen.tap --org 16384 --blockname arti.scr --noloader || exit
 
 echo "~~~GAME~~~"
-zmakebas -n arti.bas -o ${tmp}/game.tap -a @udg -i 10 -l $file || exit
+zmakebas -n arti.bas -o ${tmp}/game.tap -a @udg -i 10 -l ${file} || exit
 
 echo "~~~LOADER~~~"
 cat > ${tmp}/loader.bas << _BASIC_
