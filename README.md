@@ -1,4 +1,4 @@
-# artillery
+# Artillery
 Projectile Motion Simulation for ZX Spectrum
 
 https://patters.itch.io/artillery
