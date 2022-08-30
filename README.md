@@ -13,5 +13,4 @@ A BASIC demake of Artillery for Macintosh by Kirk Crawford
 This could have been a perfect example of use of computers in the 80s for studying at school.
 Very good work!
 
-_IvanBasic, worldofspectrum.org forum_
-_[(BASIC coding supremo)](https://spectrumcomputing.co.uk/list?label_id=16585)_
+_IvanBasic, worldofspectrum.org forum (BASIC coding supremo)_
