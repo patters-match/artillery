@@ -14,5 +14,5 @@ This could have been a perfect example of use of computers in the 80s for studyi
 Very good work!  
 IvanBasic, worldofspectrum.org forum (BASIC coding supremo)_
 
-> _-A fun little game... For a BASIC game I thought it was brilliant.  
+> _-A fun little game... For a BASIC game I thought it was brilliant!  
 [retro robbins](http://www.youtube.com/watch?v=JdqsA7yULRk&t=8m50s), youtube.com_
