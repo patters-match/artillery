@@ -1,6 +1,7 @@
 # Artillery
 Projectile Motion Simulation for ZX Spectrum.
 
+Download the game here:
 https://patters.itch.io/artillery
 
 [![Artillery Screenshots](images/artillery.png "Artillery Screenshots")](https://patters.itch.io/artillery)
