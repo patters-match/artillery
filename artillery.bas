@@ -173,6 +173,7 @@
             if c(y+1,2)<31 then \
                 print at y,c(y+1,2)+1; paper sk; bright bs; over ov; ink 8;tab 31;" "
 @drawcastles:
+# castle sprites are redrawn in horizontal slices with the terrain
             if y=k then print a$(30 to )
             if y=k-1 then print a$(17 to 29)
             if y=k-2 then print a$( to 16)
@@ -187,15 +188,20 @@
         rem sub - generate and draw terrain
         rem 
 @terraingendraw:
-        dim c(22,2): rem terrain matrix, last 2 rows for water extents
+# terrain sine function produces a height y for each x value (vertical stripes)
+# these are very slow to render vertically, and cannot easily be redrawn to change colours for time of day changes
+# by converting this shape into an array of 20 rows of start-stop extents we can draw the landscape in horizontal slices very fast using tab
+        dim c(22,2): rem terrain array, last 2 rows for water extents
         rem generate terrain left to right with sine function
         let f=k+2: rem previous y value
         let t=0: rem x is river
         let p=0: rem prev x is river
         let ym=19: rem peak     
+# castle 1 footing
         for n=0 to x1+2: \
             print at k+1,n;"~": \
         next n      
+# landscape between the castles
         for x=x1+3 to x2-2
             let n=abs (31*q-x): rem x-flip
             let y=21-int (v*sin (pi/w*n-s)+r+0.5)
@@ -226,9 +232,11 @@
                 let xy=x: rem peak
         next x
         if u+1>y then let c(y+1,2)=x-1: rem fix last descending extent
+# castle 2 footing
         for n=x2-1 to 31: \
             print at u+1,n;"~": \
         next n
+# ensure solid flat ground under both castles in the landscape horizontal slices
         for y=k+1 to 19: \
             let c(y+1,1)=0: \
         next y: rem castle 1 footing
@@ -250,8 +258,7 @@
         let ov=0
         for y=19 to ym step -1
             if y=18 then \
-                if rv then gosub @drawwater: \
-                rem draw water
+                if rv then gosub @drawwater: rem draw water
             if y=k then print a$
             if y=u then print b$
             print at y,c(y+1,1); paper te; ink 3; bright bt;tab c(y+1,2);" "
@@ -266,6 +273,7 @@
 @redrawsky:
         for y=s to e step dd
             print at y,0; over ov; ink 8;tab 31;" "
+# castle sprites are redrawn in horizontal slices with the sky
             if y=k then print a$(30 to )
             if y=k-1 then print a$(17 to 29)
             if y=k-2 then print a$( to 16)
@@ -377,6 +385,8 @@
         rem terrain and castle setup
         rem 
 @castleselevation:
+# define all our random variables for the terrain now, and check they produce valid castle elevations, re-roll if not
+# full terrain will be calculated later using these same random vars
         let v=(rnd*8)+3: rem amplitude
         let w=(rnd*4)+13: rem frequency
         let r=(rnd*(17-((v<6)*v)+((v>9)*(12-v))))-2: rem y-offset
@@ -585,6 +595,7 @@
         dim b$(42): rem castle sprites
         dim g$(46): \
         dim h$(46): rem hit castle sprites
+# define sprites as chr$ control codes with position and colours encoded - will render much faster than print at
 @arrowsprite:
         data 22,0,0,21,1,19,8,17,8,16,3,94: rem top arrow
 @castlesprite:
@@ -950,7 +961,7 @@
 # | v$           | INPUT value prompt                      |                                   |                     |                   |                 |
 # | w$           | flag and pole (orients w. wind)         |                                   |                     |                   |                 |
 # |              |                                         |                                   |                     |                   |                 |
-# | c(22,2)      | terrain matrix (last 2 rows for water)  |                                   |                     |                   |                 |
+# | c(22,2)      | terrain array  (last 2 rows for water)  |                                   |                     |                   |                 |
 # | e(7,4)       | sky and terrain colour LUT              |                                   |                     |                   |                 |
 # +──────────────+─────────────────────────────────────────+───────────────────────────────────+─────────────────────+───────────────────+─────────────────+
 
