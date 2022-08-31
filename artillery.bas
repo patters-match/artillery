@@ -189,7 +189,7 @@
         rem 
 @terraingendraw:
 # terrain sine function produces a height y for each x value (vertical stripes)
-# these are very slow to render vertically, and cannot easily be redrawn to change colours for time of day changes
+# rendering vertically is very slow, and far too slow for redrawing the screen to implement time of day changes
 # by converting this shape into an array of 20 rows of start-stop extents we can draw the landscape in horizontal slices very fast using tab
         dim c(22,2): rem terrain array, last 2 rows for water extents
         rem generate terrain left to right with sine function
