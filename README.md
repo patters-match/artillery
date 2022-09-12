@@ -17,3 +17,5 @@ Very good work!
 This game is a BASIC demake of Artillery for Macintosh by Kirk Crawford:
 
 [![Macintosh Artillery](images/artillery_mac.png "Macintosh Artillery")](https://kirkanddonna.com/kirk/artillery)
+
+[BMP2SCR 2.11a](https://worldofspectrum.net/utilities/) by [Leszek Daniel Chmielewski](http://members.inode.at/838331/) was used to create the loading screen
