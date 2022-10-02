@@ -265,7 +265,6 @@
             if y=u-2 then print b$( to 16)
         next y
         return 
-
                                                            rem 
                                                            rem sub - redraw terrain and sky
                                                            rem 
