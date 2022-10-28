@@ -7,7 +7,8 @@
                                                            rem Started in about 1994 and mostly developed in Feb 2019 by patters
                                                            rem 
                                                            rem sub - trajectories loop
-                                                           rem 
+                                                           rem
+#                                                          BASIC code at the top of the listing runs faster so the most performance critial code lives here                                                            
 @trajectoriesloop:
         for t=0 to 30 step 0.5
 #                                                          player 1
@@ -844,9 +845,9 @@
         let sk=6: \
         gosub @updspritecolours: \
         goto @newgame
-
+#
 # Sinclair BASIC is much faster with smaller variables names, lookup table below:
-
+#
 # +--------------+-----------------------------------------+-----------------------------------+---------------------+-------------------+-----------------+
 # | Var/Context  | Global                                  | Trajectory loop                   | Terrain generation  | Edge detect       | Terrain draw    |
 # +--------------+-----------------------------------------+-----------------------------------+---------------------+-------------------+-----------------+
