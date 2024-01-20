@@ -20,5 +20,5 @@ This game is a BASIC demake of Artillery for Macintosh by Kirk Crawford:
 
 [BMP2SCR 2.11a](https://worldofspectrum.net/utilities/) by [Leszek Daniel Chmielewski](http://members.inode.at/838331/) was used to create the loading screen
 
-Sinclair BASIC has no ELSE construct in its conditional logic. This often forces complex logic into a mess of GO&nbsp;TO or GO&nbsp;SUB instructions which 
-severely impair performance. Refining the trajectory loop logic was very tricky, as can be seen [here](trajectory_loop.md).
+Sinclair BASIC has no ELSE construct in its conditional logic. This often forces complex logic into a mess of compound conditions or GO&nbsp;TO or GO&nbsp;SUB instructions which 
+severely impair performance. Refining the trajectory loop logic was very tricky, as can be seen [in this flow diagram](trajectory_loop.md).
