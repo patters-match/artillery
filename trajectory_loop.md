@@ -1,4 +1,5 @@
-# Trajectory Loop Logic
+# Artillery
+## Trajectory Loop Logic
 
 ```mermaid
 flowchart TD
