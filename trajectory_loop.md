@@ -28,7 +28,8 @@ flowchart TD
         T -->|No| V
         U --> V{{Is X off far side of screen?}}
         V -->|Yes| V2[on_screen = false]
-        V2 --> W{{Is Y between target castle and screen top?}}
+        V2 --> W{{"Is Y between target castle
+                   and screen top?"}}
         W -->|Yes| X(Draw far side off-screen arrow at Y)
     end
     P -->|false| A3
