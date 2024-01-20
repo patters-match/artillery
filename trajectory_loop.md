@@ -39,7 +39,8 @@ flowchart TD
     Y -->|false| A3
     subgraph TD[Trajectory Drawing]
         Y1 -->|false| Z2(Plot point X,Y)
-        Y1 -->|true| Z1(Line draw new trajectory increment to X,Y)
+        Y1 -->|true| Z1("Line draw new trajectory
+                         increment to X,Y")
     end
     subgraph CD[Collision Detection]
         Z1 & Z2 --> A1{{Hit ground?}}
