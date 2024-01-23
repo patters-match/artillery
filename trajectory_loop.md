@@ -4,7 +4,7 @@
 ```mermaid
 flowchart TD
     A(Calculate new X and Y)-->B{{Is X off home side of screen?}}
-    subgraph OSC[Simple off-screen and no flight cases]
+    subgraph OSC[Simple off-screen and no-flight cases]
         B -->|No| B1[on_screen = true] --> D{{Is Y below screen?}}
         B -->|Yes| C[on_screen = false]
         C --> D
